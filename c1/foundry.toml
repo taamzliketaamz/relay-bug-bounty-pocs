@@ -1,0 +1,20 @@
+# C1 (Relay Executor + Allocator) PoC project.
+# Relay contracts under src/ are VERBATIM from
+# relayprotocol/relay-settlement @ b2f3e0e5fba9381293f030ef340ffb4872687fcf
+# (smart-contracts/contracts/, only the files this PoC needs).
+# Dependencies are real releases: OpenZeppelin 5.3.0, forge-std 1.10.0.
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.28"
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+cbor_metadata = false
+
+remappings = [
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "forge-std/=lib/forge-std/src/",
+]
